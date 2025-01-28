@@ -2,11 +2,10 @@
 @use "base/mixin" as m;
 
 .galeria {
-
-    img{
-        height: 20rem;
-        object-fit: cover;
-    }
+  img {
+    height: 20rem;
+    object-fit: cover;
+  }
   @include m.contenedor;
   &-imagenes {
     @include m.grid(1, 2rem);
@@ -19,5 +18,40 @@
     @include m.desktop {
       @include m.grid(4, 2rem);
     }
+  }
+}
+.modal {
+  position: fixed;
+  inset: 0;
+
+  background-color: rgba(v.$negro, 0.3);
+  display: grid;
+  place-items: center;
+  animation: fadeIn ease-in 0.5s;
+
+  &.fade-out {
+    animation: fadeOut easi-in 0.5s;
+  }
+
+  img {
+    border-radius: 0.5rem;
+    max-width: 100rem;
+    position: relative;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
