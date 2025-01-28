@@ -55,3 +55,16 @@
     opacity: 0;
   }
 }
+.btn-cerrar{
+  width: 4rem;
+  height: 4rem;
+  display: grid;
+  border-radius: 50%;
+  background-color: v.$blanco;
+  border: none;
+  color: v.$negro;
+  place-items: center;
+  font-weight: 800;
+  cursor: pointer;
+
+}
